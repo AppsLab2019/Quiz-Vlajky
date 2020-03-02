@@ -16,10 +16,11 @@ namespace Quiz_Vlajky
     {
         private List<string> euCountries = new List<string>()
         {
-            "Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina", "Croatia", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary",
-            "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Moldova", "Montenegro", "Netherlands", "North Macedonia", "Norway", "Poland", "Portugal",
-            "Romania", "Russia", "San_Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Ukraine", "United Kingdom"
+            "Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia_and_Herzegovina", "Croatia", "Czech_Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary",
+            "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Moldova", "Montenegro", "Netherlands", "North_Macedonia", "Norway", "Poland", "Portugal",
+            "Romania", "Russia", "San_Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Ukraine", "United_Kingdom"
         };
+        private Random rnd = new Random();
         private readonly ImageButton[] Buttons;
         private int round = 0;
 
@@ -35,29 +36,38 @@ namespace Quiz_Vlajky
         }
         private void GetRandomCountry()
         {
-                var rnd = new Random();
-                int countryIndex = rnd.Next(0, euCountries.Count - 1);
-                Country.Text = euCountries[countryIndex];
-                int flagBtn = rnd.Next(0, 3);
-
+           
+            int selectedCountryIndex = rnd.Next(0, euCountries.Count);
+            Country.Text = euCountries[selectedCountryIndex].Replace('_', ' ');
+            int flagBtn = rnd.Next(0, 3);
+            Buttons[flagBtn].Source = $"{euCountries[selectedCountryIndex]}.png";            
+            foreach (var btn in Buttons)
+            {
+                int wrongCountryIndex = rnd.Next(0, euCountries.Count);
+                if (btn.Source.ToString() != $"File: {euCountries[selectedCountryIndex]}.png")
+                {
+                    btn.Source = $"{euCountries[wrongCountryIndex]}.png";
+                }
+            }
 
         }
         private void ImageButton_Clicked_1(object sender, EventArgs e)
         {
-            
-        } 
+
+        }
         private void ImageButton_Clicked_2(object sender, EventArgs e)
         {
 
         }
-
         private void ImageButton_Clicked_3(object sender, EventArgs e)
         {
 
         }
         private void ImageButton_Clicked_4(object sender, EventArgs e)
         {
-            
+
         }
+
+
     }
 }
