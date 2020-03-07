@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Quiz_Vlajky.MainPage">
 
-    <Grid RowSpacing="50" ColumnSpacing="20" BackgroundColor="#333333">
+    <Grid RowSpacing="50" ColumnSpacing="20" BackgroundColor="#333333" x:Name="bc">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>

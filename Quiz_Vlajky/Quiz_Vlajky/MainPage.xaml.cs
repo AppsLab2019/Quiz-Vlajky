@@ -22,7 +22,8 @@ namespace Quiz_Vlajky
         };
         private Random rnd = new Random();
         private readonly ImageButton[] Buttons;
-        private int round = 0;
+        private int round = 1;
+        private int right = 0;
 
         public MainPage()
         {
@@ -32,9 +33,9 @@ namespace Quiz_Vlajky
             {
                 btn.Source = "";
             }
-            GetRandomCountry();
+            RandomCountry();
         }
-        private void GetRandomCountry()
+        private void RandomCountry()
         {
            
             int selectedCountryIndex = rnd.Next(0, euCountries.Count);
@@ -50,22 +51,61 @@ namespace Quiz_Vlajky
                 }
             }
 
+            if (round == 10)
+            {
+                DisplayAlert($"You got {right} correct answers.", "", "Cancel");
+                round = 0;
+                right = 0;
+            }
+
         }
         private void ImageButton_Clicked_1(object sender, EventArgs e)
         {
-
+            Check(sender);
+            Timer(350);
+            RandomCountry();
         }
         private void ImageButton_Clicked_2(object sender, EventArgs e)
         {
-
+            Check(sender);
+            Timer(350);
+            RandomCountry();
         }
         private void ImageButton_Clicked_3(object sender, EventArgs e)
         {
-
+            Check(sender);
+            Timer(350);
+            RandomCountry();
         }
         private void ImageButton_Clicked_4(object sender, EventArgs e)
         {
+            Check(sender);
+            Timer(350);
+            RandomCountry();
+        }
 
+        private void Timer(int time)
+        {
+            Device.StartTimer(TimeSpan.FromMilliseconds(time), () =>
+            {
+                round++;
+                Question.Text = $"{round}/10";
+                bc.BackgroundColor = Color.FromHex("#333333");
+                return false;
+            });
+        }
+
+        private void Check(object sender)
+        {
+            if (Country.Text.Replace('_', ' ') == ((ImageButton)sender).Source.ToString().Replace("File: ", "").Replace(".png", "").Replace('_', ' '))
+            {
+                bc.BackgroundColor = Color.LawnGreen;
+                right++;
+            }
+            else
+            {
+                bc.BackgroundColor = Color.Red;
+            }
         }
 
 
