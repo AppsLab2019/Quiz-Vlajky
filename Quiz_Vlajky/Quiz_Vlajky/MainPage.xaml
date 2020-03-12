@@ -19,10 +19,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label
-            Grid.Row="0"
-            Grid.Column="0"
-            Text="1"/>
-        <Label
             x:Name="Question"
             Grid.Row="1"
             Grid.Column="1"
@@ -30,18 +26,17 @@
             TextColor="White"
             FontSize="Large"
             Margin="70, 0, 0, 0"/>
-            
         <Label
             x:Name="Country"
             Text=""
-            Grid.Row="1"
+            Grid.Row="1" Grid.Column="0"
             HorizontalOptions="Center"
             FontSize="Large"
             TextColor="White"/>
-        <ImageButton x:Name="btn1" Grid.Row="2" Grid.Column="0" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked_1" BackgroundColor="Transparent"/>
-        <ImageButton x:Name="btn2" Grid.Row="2" Grid.Column="1" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked_2" BackgroundColor="Transparent"/>
-        <ImageButton x:Name="btn3" Grid.Row="3" Grid.Column="0" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked_3" BackgroundColor="Transparent"/>
-        <ImageButton x:Name="btn4" Grid.Row="3" Grid.Column="1" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked_4" BackgroundColor="Transparent"/>
+        <ImageButton x:Name="btn1" Grid.Row="2" Grid.Column="0" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"/>
+        <ImageButton x:Name="btn2" Grid.Row="2" Grid.Column="1" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"/>
+        <ImageButton x:Name="btn3" Grid.Row="3" Grid.Column="0" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"/>
+        <ImageButton x:Name="btn4" Grid.Row="3" Grid.Column="1" Margin="20, 10, 20, 10" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"/>
     </Grid>
 
 </ContentPage>
