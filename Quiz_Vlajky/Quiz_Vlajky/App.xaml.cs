@@ -1,5 +1,4 @@
-﻿using Quiz_Vlajky.Views;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Quiz_Vlajky
 {
@@ -8,8 +7,8 @@ namespace Quiz_Vlajky
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new PlayingPage());
+            MainPage = new AppShell();
+            
         }
     }
 }
