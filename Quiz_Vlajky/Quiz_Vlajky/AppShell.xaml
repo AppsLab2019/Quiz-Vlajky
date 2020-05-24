@@ -7,9 +7,22 @@
        xmlns:views="clr-namespace:Quiz_Vlajky.Views"
        x:Class="Quiz_Vlajky.AppShell"
        Title="Quiz_Vlajky"
-       BackgroundColor="Black">
+       BackgroundColor="Black"
+       FlyoutBackgroundColor="#333333">
 
-    <FlyoutItem Title="Start">
+    <FlyoutItem Title="Menu" >
+        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Europe">
+        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Asia">
+        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="America">
+        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Africa">
         <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
     </FlyoutItem>
 </Shell>
