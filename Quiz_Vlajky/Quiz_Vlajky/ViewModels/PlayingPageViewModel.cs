@@ -1,4 +1,5 @@
 ﻿using Quiz_Vlajky.Models;
+using Quiz_Vlajky.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace Quiz_Vlajky.ViewModels
     public class PlayingPageViewModel : INotifyPropertyChanged
     {
         private const int OptionsCount = 4;
-        private Color _defaultColor = Color.FromHex("#333333");
+        private Color _defaultColor = Color.FromHex("#101820");
         private Color _rightColor = Color.Green;
         private Color _wrongColor = Color.DarkRed;
 
@@ -85,7 +86,7 @@ namespace Quiz_Vlajky.ViewModels
             _correctAnswers = 0;
             CurrentRound = 1;
 
-            SelectRandomCountries();
+            await Shell.Current.Navigation.PopAsync();
         }
 
         private void SelectRandomCountries()

@@ -5,22 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Quiz_Vlajky.Views.MainPage"
-             BackgroundColor="#333333">
+             BackgroundColor="#101820">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Text="Welcome to Quiz Vlajky!"
+        <Label Text="Welcome to Quiz Flags!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
-                   Grid.Row="0"/>
-        <Button Text="EUROPE" Clicked="Button_Clicked" Grid.Row="1"/>
-        <Button Text="ASIA" Clicked="Button_Clicked" Grid.Row="2"/>
-        <Button Text="AMERICA" Clicked="Button_Clicked" Grid.Row="3"/>
-        <Button Text="AFRICA" Clicked="Button_Clicked" Grid.Row="4"/>
+                TextColor="White"
+                FontSize="20"
+                Grid.Row="0"/>
+        <Button Text="EUROPE" Clicked="Button_Clicked" CornerRadius="10" Margin="40, 0, 40, 0" HeightRequest="60" Grid.Row="1"/>
+        <Button Text="ASIA" Clicked="Button_Clicked" CornerRadius="10" Margin="40, 30" HeightRequest="60" Grid.Row="2"/>
     </Grid>
 </ContentPage>

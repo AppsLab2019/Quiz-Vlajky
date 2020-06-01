@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+    
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -6,23 +7,11 @@
        mc:Ignorable="d"
        xmlns:views="clr-namespace:Quiz_Vlajky.Views"
        x:Class="Quiz_Vlajky.AppShell"
-       Title="Quiz_Vlajky"
-       BackgroundColor="Black"
-       FlyoutBackgroundColor="#333333">
+       FlyoutBehavior="Disabled"
+       NavBarIsVisible="False">
 
-    <FlyoutItem Title="Menu" >
-        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Europe">
-        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Asia">
-        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="America">
-        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Africa">
-        <ShellContent ContentTemplate="{DataTemplate views:PlayingPage}" />
-    </FlyoutItem>
+    <ShellItem>
+        <views:MainPage />
+    </ShellItem>
+    
 </Shell>
