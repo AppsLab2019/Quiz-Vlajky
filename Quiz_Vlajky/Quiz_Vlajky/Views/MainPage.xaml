@@ -11,16 +11,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label Text="Welcome to Quiz Flags!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                TextColor="White"
-                FontSize="20"
-                Grid.Row="0"/>
-        <Button Text="EUROPE" Clicked="Button_Clicked" CornerRadius="10" Margin="40, 0, 40, 0" HeightRequest="60" Grid.Row="1"/>
-        <Button Text="ASIA" Clicked="Button_Clicked" CornerRadius="10" Margin="40, 30" HeightRequest="60" Grid.Row="2"/>
+        <Image Source="Quiz_Flags" Margin="0, 20, 0, 0"></Image>
+        <ImageButton Source="Europe" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 0, 40, 10" Grid.Row="1"/>
+        <ImageButton Source="Asia" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="2"/>
+        <ImageButton Source="America" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="3"/>
+        <ImageButton Source="Africa" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="4"/>
+        <ImageButton Source="World" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="5"/>
     </Grid>
 </ContentPage>

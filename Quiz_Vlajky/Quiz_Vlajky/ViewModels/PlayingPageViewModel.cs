@@ -121,10 +121,10 @@ namespace Quiz_Vlajky.ViewModels
 
         private readonly List<Country> _countries = new List<Country>
         {
-            "Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia_and_Herzegovina", "Croatia",
-            "Czech_Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary",
+            "Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia", "Croatia",
+            "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary",
             "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Moldova",
-            "Montenegro", "Netherlands", "North_Macedonia", "Norway", "Poland", "Portugal",
+            "Montenegro", "Netherlands", "Macedonia", "Norway", "Poland", "Portugal",
             "Romania", "Russia", "San_Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Ukraine",
             "United_Kingdom"
         };

@@ -33,9 +33,9 @@
             Margin="70, 0, 0, 0">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="{Binding CurrentRound}"/>
-                    <Span Text="/"/>
-                    <Span Text="{Binding TotalRounds}"/>
+                    <Span Text="{Binding CurrentRound}" FontSize="30"/>
+                    <Span Text="/" FontSize="30"/>
+                    <Span Text="{Binding TotalRounds}" FontSize="30"/>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
@@ -44,7 +44,7 @@
             Text="{Binding CorrectOption.Name}"
             Grid.Row="1" Grid.Column="0"
             HorizontalOptions="Center"
-            FontSize="Large"
+            FontSize="30"
             TextColor="White"/>
 
         <ImageButton Grid.Row="2" Grid.Column="0" BackgroundColor="Transparent" Source="{Binding Options[0].Image}" Command="{Binding SelectFlagCommand}" CommandParameter="0"/>
