@@ -3,23 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Quiz_Vlajky.ViewModels"
              mc:Ignorable="d"
              x:Class="Quiz_Vlajky.Views.MainPage"
              BackgroundColor="#101820">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Image Source="Quiz_Flags" Margin="0, 20, 0, 0"></Image>
-        <ImageButton Source="Europe" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 0, 40, 10" Grid.Row="1"/>
-        <ImageButton Source="Asia" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="2"/>
-        <ImageButton Source="America" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="3"/>
-        <ImageButton Source="Africa" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="4"/>
-        <ImageButton Source="World" BackgroundColor="Transparent" Clicked="Button_Clicked" Margin="40, 10" Grid.Row="5"/>
-    </Grid>
+    
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="Quiz_Flags" Margin="0, 20, 0, 0"/>
+            <ImageButton Source="Europe" BackgroundColor="Transparent" Command="{Binding Click_Command}" CommandParameter="Europe" Margin="40, 0, 40, 10" Grid.Row="1"/>
+            <ImageButton Source="Asia" BackgroundColor="Transparent" Command="{Binding Click_Command}" CommandParameter="Asia" Margin="40, 10" Grid.Row="2"/>
+            <ImageButton Source="America" BackgroundColor="Transparent" Command="{Binding Click_Command}" CommandParameter="America" Margin="40, 10" Grid.Row="3"/>
+            <ImageButton Source="Africa" BackgroundColor="Transparent" Command="{Binding Click_Command}" CommandParameter="Africa" Margin="40, 10" Grid.Row="4"/>
+            <ImageButton Source="World" BackgroundColor="Transparent" Command="{Binding Click_Command}" CommandParameter="World" Margin="40, 10" Grid.Row="5"/>
+        </Grid>
+    </ScrollView>
 </ContentPage>
